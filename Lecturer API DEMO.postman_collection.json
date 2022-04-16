@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "21fdf038-39b0-4b59-9380-89adae4a44ec",
+		"name": "Lecturer API DEMO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Welcome Page",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}",
+					"host": [
+						"{{API_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload Class Data",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "/Users/jessicahenry/Desktop/final-aws-project/class-1.csv"
+					}
+				},
+				"url": {
+					"raw": "{{API_ENDPOINT}}/upload-class-data?class=SX101",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"upload-class-data"
+					],
+					"query": [
+						{
+							"key": "class",
+							"value": "SX101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List All students and classes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}",
+					"host": [
+						"{{API_ENDPOINT}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Emails for Feedback",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{API_ENDPOINT}}/send-feedback/SX110",
+					"host": [
+						"{{API_ENDPOINT}}"
+					],
+					"path": [
+						"send-feedback",
+						"SX110"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "API_ENDPOINT",
+			"value": "https://yi2u2j61yd.execute-api.eu-west-1.amazonaws.com/dev/"
+		}
+	]
+}
